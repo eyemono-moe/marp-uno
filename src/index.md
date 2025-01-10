@@ -1,6 +1,7 @@
 ---
 theme: default
 paginate: true
+image: https://marp-uno.pages.dev/index.jpg
 ---
 
 # Marpuno
