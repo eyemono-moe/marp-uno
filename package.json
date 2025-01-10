@@ -1,0 +1,26 @@
+{
+  "name": "marp-uno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "marp -w --html -s src/slides",
+    "prebuild": "rm -rf dist && mkdir -p dist && cp -r src/* dist",
+    "build": "marp dist --image png && marp dist",
+    "start": "marp --html -s dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@marp-team/marp-cli": "4.0.4",
+    "@marp-team/marp-core": "4.0.1",
+    "@marp-team/marpit": "3.1.2",
+    "@unocss/core": "0.65.4",
+    "markdown-it-attrs": "4.3.1",
+    "markdown-it-container": "4.0.0",
+    "markdown-it-mark": "4.0.0",
+    "unocss": "0.65.4"
+  }
+}

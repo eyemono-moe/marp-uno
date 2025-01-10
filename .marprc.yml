@@ -1,0 +1,5 @@
+lang: ja
+size: 16:9
+author: eyemono.moe
+engine: engine.mjs
+allowLocalFiles: true
