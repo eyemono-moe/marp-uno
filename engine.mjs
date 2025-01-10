@@ -1,8 +1,8 @@
 import { Marp } from "@marp-team/marp-core";
 import { createGenerator } from "@unocss/core";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItBracketedSpans from "markdown-it-bracketed-spans";
 import markdownItContainer from "markdown-it-container";
-import markdownItMark from "markdown-it-mark";
 import unoConfig from "./uno.config.mjs";
 
 const unoGenerator = await createGenerator(unoConfig);
@@ -27,7 +27,19 @@ export default async ({ marp: _marp, ...config }) => {
   const uno = new UnoMarp(config);
 
   return uno
-    .use(markdownItContainer, "")
+    .use(markdownItBracketedSpans)
     .use(markdownItAttrs)
-    .use(markdownItMark);
+    .use(markdownItContainer, "", {
+      // allow empty name
+      validate: () => true,
+      render: (tokens, idx) => {
+        const _class = tokens[idx].info.trim();
+        if (tokens[idx].nesting === 1) {
+          // opening tag
+          return `<div class="${_class}">\n`;
+        }
+        // closing tag
+        return "</div>\n";
+      },
+    });
 };

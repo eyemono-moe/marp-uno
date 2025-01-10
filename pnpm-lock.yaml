@@ -11,6 +11,9 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
+      '@iconify-json/material-symbols':
+        specifier: ^1.2.12
+        version: 1.2.12
       '@marp-team/marp-cli':
         specifier: 4.0.4
         version: 4.0.4
@@ -26,10 +29,10 @@ importers:
       markdown-it-attrs:
         specifier: 4.3.1
         version: 4.3.1(markdown-it@14.1.0)
+      markdown-it-bracketed-spans:
+        specifier: 1.0.1
+        version: 1.0.1
       markdown-it-container:
-        specifier: 4.0.0
-        version: 4.0.0
-      markdown-it-mark:
         specifier: 4.0.0
         version: 4.0.0
       rimraf:
@@ -436,6 +439,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/material-symbols@1.2.12':
+    resolution: {integrity: sha512-2p2T13Kccy7R2HNbdiVsIcHxjp4s9a+iKlfbtt29hldG1pVNaPIlMALNA9bjdEwPjwsVFe06INCbjCRc68JysQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1186,14 +1192,14 @@ packages:
     peerDependencies:
       markdown-it: '>= 9.0.0'
 
+  markdown-it-bracketed-spans@1.0.1:
+    resolution: {integrity: sha512-ffDHx7bdOEecvo/EPpsatFLNnLZBRdj+ZF/v6gGJh0ixU0oVWxUUeJn5daVnT0sn0MU73G9oPDTqBX82z99fnw==}
+
   markdown-it-container@4.0.0:
     resolution: {integrity: sha512-HaNccxUH0l7BNGYbFbjmGpf5aLHAMTinqRZQAEQbMr2cdD3z91Q6kIo1oUn1CQndkT03jat6ckrdRYuwwqLlQw==}
 
   markdown-it-front-matter@0.2.4:
     resolution: {integrity: sha512-25GUs0yjS2hLl8zAemVndeEzThB1p42yxuDEKbd4JlL3jiz+jsm6e56Ya8B0VREOkNxLYB4TTwaoPJ3ElMmW+w==}
-
-  markdown-it-mark@4.0.0:
-    resolution: {integrity: sha512-YLhzaOsU9THO/cal0lUjfMjrqSMPjjyjChYM7oyj4DnyaXEzA8gnW6cVJeyCrCVeyesrY2PlEdUYJSPFYL4Nkg==}
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
@@ -1886,6 +1892,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.24.2':
     optional: true
+
+  '@iconify-json/material-symbols@1.2.12':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
 
@@ -2735,11 +2745,11 @@ snapshots:
     dependencies:
       markdown-it: 14.1.0
 
+  markdown-it-bracketed-spans@1.0.1: {}
+
   markdown-it-container@4.0.0: {}
 
   markdown-it-front-matter@0.2.4: {}
-
-  markdown-it-mark@4.0.0: {}
 
   markdown-it@14.1.0:
     dependencies:
