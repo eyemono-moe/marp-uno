@@ -3,3 +3,6 @@ size: 16:9
 author: eyemono.moe
 engine: engine.mjs
 allowLocalFiles: true
+inputDir: ./src
+output: ./dist
+html: true
