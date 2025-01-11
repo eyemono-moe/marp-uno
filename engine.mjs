@@ -36,7 +36,7 @@ export default async ({ marp: _marp, ...config }) => {
         const _class = tokens[idx].info.trim();
         if (tokens[idx].nesting === 1) {
           // opening tag
-          return `<div class="${_class}">\n`;
+          return `<div ${_class ? `class="${_class}"` : ""}>\n`;
         }
         // closing tag
         return "</div>\n";
